@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CategoriesAdapter"></activity>
+        <activity android:name=".CategoriesAdapter" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".entry_menu" />
+        <activity android:name=".MenuItemActivity"></activity>
     </application>
 
 </manifest>

@@ -56,7 +56,7 @@ public class CategoriesRequest implements Response.Listener<JSONObject>, Respons
     @Override
     public void onResponse(JSONObject response) {
 
-        // creates JSON array
+        // fills ArrayList from the JSON object
         try {
             // stores items JSON array in an ArrayList
             JSONArray categoriesArray = response.getJSONArray("categories");
@@ -73,7 +73,7 @@ public class CategoriesRequest implements Response.Listener<JSONObject>, Respons
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        // calls gotCategoriesError form Callback interface
+        // calls gotCategoriesError from Callback interface
         inputActivity.gotCategoriesError(error.getMessage());
     }
 }
