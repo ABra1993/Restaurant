@@ -14,6 +14,8 @@ import org.w3c.dom.Text;
 
 public class MenuItemActivity extends AppCompatActivity {
 
+    MenuItem currentMenuItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class MenuItemActivity extends AppCompatActivity {
         // retrieves info previous activity
         Intent intent = getIntent();
         MenuItem retrievedMenuItem = (MenuItem) intent.getSerializableExtra("clickedMenuItem");
+        currentMenuItem = retrievedMenuItem;
 
         // sets views
         Picasso.get().load(retrievedMenuItem.getImageUrl()).into(menuItemImage);

@@ -41,7 +41,6 @@ public class MenuAdapter extends ArrayAdapter<MenuItem> {
 
         Picasso.get().load(data.get(position).getImageUrl()).into(menuImage);
         menuName.setText(data.get(position).getName());
-        //menuPrice.setText(data.get(position).getPrice());
 
         // show price in euros
         String euro = "\u20ac";

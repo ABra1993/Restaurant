@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class MenuItem implements Serializable {
 
     // initializes properties...
-    String name, description, imageUrl, category, price;
+    private String name, description, imageUrl, category, price;
 
     // initializes constructor...
     public MenuItem(String name, String description, String imageUrl, String category, String price) {
