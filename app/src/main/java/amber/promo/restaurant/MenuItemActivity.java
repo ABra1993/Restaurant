@@ -12,7 +12,12 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class MenuItemActivity extends AppCompatActivity {
+    /** Sets up activity showing menu items. */
 
     MenuItem currentMenuItem;
 
@@ -33,8 +38,15 @@ public class MenuItemActivity extends AppCompatActivity {
         MenuItem retrievedMenuItem = (MenuItem) intent.getSerializableExtra("clickedMenuItem");
         currentMenuItem = retrievedMenuItem;
 
-        // sets views
+        // assign image for chicken noodle soup (URL gives 404 error)
+        if (retrievedMenuItem.getName().equals("Chicken Noodle Soup")) {
+            retrievedMenuItem.setImageUrl("https://3.bp.blogspot.com/-xSWatW1Yxrw/WeLUnSwm1DI/AAAAAAAADms/FJ70KBtpGXkbUHIS5Z7Sod1DTZgDH7_cACLcBGAs/s1600/0000-NO-IMAGE.jpeg");
+        }
+
+        // sets item name and image
         Picasso.get().load(retrievedMenuItem.getImageUrl()).into(menuItemImage);
+
+        // sets views
         menuItemName.setText(retrievedMenuItem.getName());
         menuItemCategory.setText(retrievedMenuItem.getCategory());
         menuItemDescription.setText(retrievedMenuItem.getDescription());

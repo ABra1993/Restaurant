@@ -45,7 +45,7 @@ public class CategoriesRequest implements Response.Listener<JSONObject>, Respons
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = "https://resto.mprog.nl/categories";
 
-        // stores API data in a JSON object
+        // stores API data from a JSON object
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
                 this, this);
 

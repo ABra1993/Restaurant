@@ -15,6 +15,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class MenuRequest implements Response.Listener<JSONObject>, Response.ErrorListener {
+    /** The following class request menu items from a JSON object and stores them in a list. */
 
     // initializes interface
     public interface Callback {
@@ -79,7 +80,6 @@ public class MenuRequest implements Response.Listener<JSONObject>, Response.Erro
 
     @Override
     public void onErrorResponse(VolleyError error) {
-
         // calls gotMenuError from Callback interface
         inputActivity.gotMenuError(error.getMessage());
     }

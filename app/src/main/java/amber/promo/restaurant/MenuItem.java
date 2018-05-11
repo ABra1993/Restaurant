@@ -3,6 +3,7 @@ package amber.promo.restaurant;
 import java.io.Serializable;
 
 public class MenuItem implements Serializable {
+    /** The following class creates menu items. */
 
     // initializes properties...
     private String name, description, imageUrl, category, price;
@@ -16,6 +17,7 @@ public class MenuItem implements Serializable {
         this.price = price;
     }
 
+    // initialized methods...
     public String getName() {
         return name;
     }
