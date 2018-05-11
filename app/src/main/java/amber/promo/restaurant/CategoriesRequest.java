@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import javax.security.auth.callback.Callback;
 
 public class CategoriesRequest implements Response.Listener<JSONObject>, Response.ErrorListener {
-    /** The following class downloads categories of food using JSON form un url. */
+    /** The following class downloads categories of food using JSON from un url. */
 
     // initializes interface
     public interface Callback {
